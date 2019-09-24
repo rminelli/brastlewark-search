@@ -7,11 +7,7 @@ import {
   CardText,
   CardBody,
   CardTitle,
-  CardSubtitle,
-  UncontrolledButtonDropdown,
-  DropdownMenu,
-  DropdownItem,
-  DropdownToggle
+  CardSubtitle
 } from "reactstrap";
 
 export const GnomeBox = ({ gnome }) => {
@@ -76,15 +72,12 @@ export default class Catalog extends Component {
     return (
      
         <div className="form-row">
-          <div className="form-group col-md-1">
-        <UncontrolledButtonDropdown>
-          <DropdownToggle caret>Select</DropdownToggle>
-          <DropdownMenu>           
-            <DropdownItem>Name</DropdownItem>
-            <DropdownItem divider />
-            <DropdownItem>Profession</DropdownItem>
-          </DropdownMenu>
-        </UncontrolledButtonDropdown>
+         <div className="form-group col-md-2">
+        <select defaultValue="" className="custom-select">
+          <option value="">Select</option>
+          <option value="Name">Name</option>
+          <option value="Professions">Profession</option>
+        </select>
         </div>
         
         <div className="form-group col-md-8">
