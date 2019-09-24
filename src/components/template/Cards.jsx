@@ -14,9 +14,10 @@ export const GnomeBox = ({ gnome }) => {
         <Card>
           <CardImg top width="100%" src={gnome.thumbnail} alt="Card image cap" className="card-img-top"/>
           <CardBody>
-            <CardTitle>{}</CardTitle>
-            <CardSubtitle>Card subtitle</CardSubtitle>
-            <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+            <label for="title">Name</label>
+            <CardTitle id="title">{gnome.name}</CardTitle>
+            <CardSubtitle>{gnome.professions.join(", ")}</CardSubtitle>
+            <CardText>{gnome.friends.join(", ")}</CardText>
             <Button>Detais</Button>
           </CardBody>
         </Card>
