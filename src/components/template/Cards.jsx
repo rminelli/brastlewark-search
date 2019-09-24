@@ -65,7 +65,6 @@ export default class Catalog extends Component {
     } else if (_searchType === "Professions") {
       _filteredGnomes = _newGnomes.filter(gnome =>
         gnome.professions.toString().includes(this.state.searchText)
-        
       );
     }
 
