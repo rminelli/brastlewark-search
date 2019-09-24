@@ -1,0 +1,10 @@
+.card-img-top {
+    width: 10%;
+    border-top-left-radius: calc(0.25rem - 1px);
+    border-top-right-radius: calc(0.25rem - 1px);
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
