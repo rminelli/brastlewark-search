@@ -33,7 +33,7 @@ export const GnomeBox = ({ gnome }) => {
 export default class Catalog extends Component {
   constructor(props) {
     super(props);
-    this.state = { respGnomesData: [], searchType: "", searchText: "" };
+    this.state = { respGnomesData: [], searchType: "Name", searchText: "" };
   }
 
   componentDidMount = async () => {
@@ -84,11 +84,10 @@ export default class Catalog extends Component {
       <div className="form-row">
         <div className="form-group col-md-2">
           <select
-            defaultValue=""
+            defaultValue="Name"
             className="custom-select"
             onChange={e => this.selectType(e)}
-          >
-            <option value="">Select</option>
+          >            
             <option value="Name">Name</option>
             <option value="Professions">Professions</option>
           </select>
