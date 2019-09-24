@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import GetData from "../data/GetData";
 import "./Cards.css";
 import {
-  Card,
   CardImg,
   CardText,
   CardBody,
@@ -34,7 +33,7 @@ export const GnomeBox = ({ gnome }) => {
 export default class Catalog extends Component {
   constructor(props) {
     super(props);
-    this.state = { respGnomesData: [], searchText: "" };
+    this.state = { respGnomesData: [], searchType: "", searchText: "" };
   }
 
   componentDidMount = async () => {
@@ -45,6 +44,11 @@ export default class Catalog extends Component {
     });
   };
 
+  selectType = async event => {
+    this.setState({
+      searchType: event.target.value
+    });
+  };
   searchData = async event => {
     this.setState({
       searchText: event.target.value
@@ -52,10 +56,18 @@ export default class Catalog extends Component {
 
     let _gnomes = this.state.initState;
     let _newGnomes = this.state.respGnomesData;
+    let _searchType = this.state.searchType;
     let _filteredGnomes = [];
-    _filteredGnomes = _newGnomes.filter(gnome =>
-      gnome.name.toLowerCase().includes(this.state.searchText.toLowerCase())
-    );
+    if (_searchType === "Name") {
+      _filteredGnomes = _newGnomes.filter(gnome =>
+        gnome.name.toLowerCase().includes(this.state.searchText.toLowerCase())
+      );
+    } else if (_searchType === "Professions") {
+      _filteredGnomes = _newGnomes.filter(gnome =>
+        gnome.professions.toString().includes(this.state.searchText)
+        
+      );
+    }
 
     if (_filteredGnomes.length === 0 || !event.target.value) {
       this.setState({
@@ -70,16 +82,18 @@ export default class Catalog extends Component {
 
   render() {
     return (
-     
-        <div className="form-row">
-         <div className="form-group col-md-2">
-        <select defaultValue="" className="custom-select">
-          <option value="">Select</option>
-          <option value="Name">Name</option>
-          <option value="Professions">Profession</option>
-        </select>
+      <div className="form-row">
+        <div className="form-group col-md-2">
+          <select
+            defaultValue=""
+            className="custom-select"
+            onChange={e => this.selectType(e)}
+          >
+            <option value="">Select</option>
+            <option value="Name">Name</option>
+            <option value="Professions">Professions</option>
+          </select>
         </div>
-        
         <div className="form-group col-md-8">
           <input
             onChange={e => this.searchData(e)}
