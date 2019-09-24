@@ -1,28 +1,38 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import GetData from "../data/GetData";
 import "./Cards.css";
 import {
-  Card, CardImg, CardText, CardBody,
-  CardTitle, CardSubtitle, Button
-} from 'reactstrap';
-
+  Card,
+  CardImg,
+  CardText,
+  CardBody,
+  CardTitle,
+  CardSubtitle,
+  UncontrolledButtonDropdown,
+  DropdownMenu,
+  DropdownItem,
+  DropdownToggle
+} from "reactstrap";
 
 export const GnomeBox = ({ gnome }) => {
-
-  return (    
-      <div className="card">
-        <Card>
-          <CardImg top width="100%" src={gnome.thumbnail} alt="Card image cap" className="card-img-top"/>
-          <CardBody>
-            <label for="title">Name</label>
-            <CardTitle id="title">{gnome.name}</CardTitle>
-            <CardSubtitle>{gnome.professions.join(", ")}</CardSubtitle>
-            <CardText>{gnome.friends.join(", ")}</CardText>
-            <Button>Detais</Button>
-          </CardBody>
-        </Card>
+  return (
+    <div className="container">
+      <div className="row mb-3 b">
+        <CardImg top width="100%" src={gnome.thumbnail} alt={gnome.name} />
+        <CardBody>
+          <CardTitle>
+            <strong>Name:</strong> {gnome.name}
+          </CardTitle>
+          <CardSubtitle>
+            <strong>Professions:</strong> {gnome.professions.join(", ")}
+          </CardSubtitle>
+          <CardText>
+            <strong>Friends:</strong> {gnome.friends.join(", ")}
+          </CardText>
+        </CardBody>
       </div>
-    );
+    </div>
+  );
 };
 
 export default class Catalog extends Component {
@@ -64,24 +74,36 @@ export default class Catalog extends Component {
 
   render() {
     return (
-      <div className="container">
-        <div className="col m-0 p-0">
+     
+        <div className="form-row">
+          <div className="form-group col-md-1">
+        <UncontrolledButtonDropdown>
+          <DropdownToggle caret>Select</DropdownToggle>
+          <DropdownMenu>           
+            <DropdownItem>Name</DropdownItem>
+            <DropdownItem divider />
+            <DropdownItem>Profession</DropdownItem>
+          </DropdownMenu>
+        </UncontrolledButtonDropdown>
+        </div>
+        
+        <div className="form-group col-md-8">
           <input
             onChange={e => this.searchData(e)}
             value={this.state.searchText}
-            className="form-control form-control-borderless mb-3"
+            className="form-control form-control-borderless"
             type="search"
             placeholder="Search..."
           ></input>
         </div>
 
-        <div className="row">
+        <div className="container">
           {this.state.respGnomesData.length > 0 ? (
-            this.state.respGnomesData.map((gnome) => (
+            this.state.respGnomesData.map(gnome => (
               <GnomeBox key={gnome.id} gnome={gnome} />
             ))
           ) : (
-            <h5>Waiting...</h5>
+            <h3>Waiting... </h3>
           )}
         </div>
       </div>
