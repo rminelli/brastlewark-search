@@ -16,15 +16,21 @@ export const GnomeBox = ({ gnome }) => {
         <CardImg top width="100%" src={gnome.thumbnail} alt={gnome.name} />
         <CardBody>
           <CardTitle>
-            <strong>Name:</strong> {gnome.name}
+            <strong>Name: </strong> {gnome.name}
           </CardTitle>
           <CardSubtitle>
-            <strong>Professions:</strong> {gnome.professions.join(", ")}
+            <strong>Professions: </strong> {gnome.professions.join(", ")}
           </CardSubtitle>
           <CardText>
-            <strong>Friends:</strong> {gnome.friends.join(", ")}
+            <strong>Friends: </strong> {gnome.friends.join(", ")}
           </CardText>
-        </CardBody>
+          <hr/>
+          <CardText>
+            <strong>Haid Color: </strong> <span className="text-muted">{gnome.hair_color}</span> | 
+            <strong> Height: </strong><span className="text-muted">{Math.round(gnome.height)}</span> |
+            <strong> Weight: </strong> <span className="text-muted">{Math.round(gnome.weight)}</span>
+          </CardText>                          
+        </CardBody>      
       </div>
     </div>
   );
