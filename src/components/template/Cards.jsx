@@ -24,13 +24,18 @@ export const GnomeBox = ({ gnome }) => {
           <CardText>
             <strong>Friends: </strong> {gnome.friends.join(", ")}
           </CardText>
-          <hr/>
+          <hr />
           <CardText>
-            <strong>Haid Color: </strong> <span className="text-muted">{gnome.hair_color}</span> | 
-            <strong> Height: </strong><span className="text-muted">{Math.round(gnome.height)}</span> |
-            <strong> Weight: </strong> <span className="text-muted">{Math.round(gnome.weight)}</span>
-          </CardText>                          
-        </CardBody>      
+            <strong>Age: </strong>
+            <span className="text-muted">{gnome.age}</span> |
+            <strong> Haid Color: </strong>
+            <span className="text-muted">{gnome.hair_color}</span> |
+            <strong> Height: </strong>
+            <span className="text-muted">{Math.round(gnome.height)}</span> |
+            <strong> Weight: </strong>
+            <span className="text-muted">{Math.round(gnome.weight)}</span>
+          </CardText>
+        </CardBody>
       </div>
     </div>
   );
@@ -93,7 +98,7 @@ export default class Catalog extends Component {
             defaultValue="Name"
             className="custom-select"
             onChange={e => this.selectType(e)}
-          >            
+          >
             <option value="Name">Name</option>
             <option value="Professions">Professions</option>
           </select>
