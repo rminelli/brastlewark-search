@@ -28,8 +28,8 @@ $ cd brastlewark-search
 $ npm install
 
 ## Available Scripts
-
 # In the project directory, you can run the App:
+
 $ npm start
 
 Runs the app in the development mode
