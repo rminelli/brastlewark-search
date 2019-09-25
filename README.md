@@ -47,7 +47,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ## Data source:
 Census data from the city: https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json
-
 ```
 
 ### Possible Improvements ❤️
