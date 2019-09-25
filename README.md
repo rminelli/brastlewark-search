@@ -43,6 +43,10 @@ $ npm run build
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
+
+# Data source:
+Censu data from the city of Brastlewark: https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json
+
 ```
 
 ### Possible Improvements ❤️
