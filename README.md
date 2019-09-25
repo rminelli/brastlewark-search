@@ -1,13 +1,14 @@
-# Web App to help to search data of all the gnomes inside Brastlewark City by their name or professions, this is an assessment challenge designed to help RPG players find gnomes in the city
-## Brastlewark Search
+# Web App to help to search data of all the gnomes inside Brastlewark City by their names or professions, this is an assessment challenge designed to help RPG players find gnomes in the city
 
+## Brastlewark Search
 
 [![prettier](https://img.shields.io/badge/styled%20with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![GitHub](https://img.shields.io/github/license/mtxr/vscode-sqltools?style=flat-square)](https://github.com/rminelli/brastlewark-search/blob/master/LICENSE)
 
 This project was created with:
+
 - Axios
-- Bootstrap 
+- Bootstrap
 - Font-awesome
 - Reactstrap
 - Bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -38,4 +39,3 @@ It correctly bundles React in production mode and optimizes the build for the be
 - Do more units tests
 - Improve data loading
 - Search for another type of gnome data like friends or age
-
