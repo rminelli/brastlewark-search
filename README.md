@@ -2,7 +2,6 @@
 ## Search Brastlewark
 
 [![prettier](https://img.shields.io/badge/styled%20with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-https://img.shields.io/npm/l/react
 
 This project was created with:
 - Axios
