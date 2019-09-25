@@ -3,7 +3,7 @@
 
 
 [![prettier](https://img.shields.io/badge/styled%20with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![GitHub](https://img.shields.io/github/license/mtxr/vscode-sqltools?style=flat-square)](https://github.com/rminelli/brastlewark-search/blob/master/README.md)
+[![GitHub](https://img.shields.io/github/license/mtxr/vscode-sqltools?style=flat-square)](https://github.com/rminelli/brastlewark-search/blob/master/LICENSE)
 
 This project was created with:
 - Axios
