@@ -33,6 +33,6 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 ### Possible Improvements
 
-Do more units tests
-Improve data loading
+- Do more units tests
+- Improve data loading
 
