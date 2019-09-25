@@ -37,7 +37,7 @@ Open http://localhost:3000 to view it in the browser. (This usually happens auto
 $ npm test
 
 Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
 
 $ npm run build
 
@@ -45,7 +45,7 @@ Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 # Data source:
-Censu data from the city of Brastlewark: https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json
+Census data from the city: https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json
 
 ```
 
