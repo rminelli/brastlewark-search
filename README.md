@@ -1,5 +1,5 @@
 # Web App to help to search data of all the gnomes inside Brastlewark City by name or professions
-## Search Brastlewark
+## Brastlewark Search
 
 [![prettier](https://img.shields.io/badge/styled%20with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
