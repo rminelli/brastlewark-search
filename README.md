@@ -1,6 +1,5 @@
-# Web App to help to search data of all the gnomes inside Brastlewark City by their names or professions, this is an assessment challenge designed to help RPG players find gnomes in the city
-
-## Brastlewark Search
+# Brastlewark Search
+## Web App to help to search data of all the gnomes inside Brastlewark City by their names or professions, this is an assessment challenge designed to help RPG players find gnomes in the city
 
 [![prettier](https://img.shields.io/badge/styled%20with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![GitHub](https://img.shields.io/github/license/mtxr/vscode-sqltools?style=flat-square)](https://github.com/rminelli/brastlewark-search/blob/master/LICENSE)
