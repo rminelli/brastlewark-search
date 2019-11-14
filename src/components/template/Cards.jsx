@@ -48,7 +48,7 @@ export default class Catalog extends Component {
   }
 
   componentDidMount = async () => {
-    const getData = await GetData;
+    const getData = await GetData();
     this.setState({
       respGnomesData: getData.Brastlewark,
       initState: getData.Brastlewark
